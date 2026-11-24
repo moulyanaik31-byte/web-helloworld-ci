@@ -1,7 +1,15 @@
-console.log("Hello World!");
-
-function greet() {
-    alert("Welcome to my first web project!");
+function getMessage() {
+    return "Welcome to DevOps CI!";
 }
 
-greet();
+function showMessage() {
+    document.getElementById("message").textContent = getMessage();
+}
+
+function add(a, b) {
+    return a + b;
+}
+
+if (typeof module !== "undefined") {
+    module.exports = { getMessage, showMessage, add };
+}
