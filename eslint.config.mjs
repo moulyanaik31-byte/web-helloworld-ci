@@ -1,11 +1,19 @@
 export default [
     {
-        files: ["**/*.js"],
+        files: ["script.js"],
+        languageOptions: {
+            sourceType: "script",
+            globals: {
+                document: "readonly",
+                module: "readonly"
+            }
+        },
         rules: {
-            "no-unused-vars": "warn",
+            "no-unused-vars": "error",
             "no-undef": "error",
-            "semi": ["error", "always"],
-            "quotes": ["error", "double"]
+            "eqeqeq": "error",
+            "no-debugger": "error",
+            "no-unreachable": "error"
         }
     }
-];
+]; 
